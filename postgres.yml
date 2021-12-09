@@ -5,6 +5,15 @@ services:
     image: postgres
     environment:
       POSTGRES_PASSWORD: "dio-inter"
+      POSTGRES_USER: "admin"
       POSTGRES_DB: "inter"
     ports:
       - "5432:5432"
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "alexandre@example.com"
+      PGADMIN_DEFAULT_PASSWORD: "sabrina13"
+    ports:
+      - "16543:80"
